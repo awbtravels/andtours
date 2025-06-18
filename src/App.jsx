@@ -11,7 +11,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        {/* Add more routes here later: Flights, Hotels, Insurance, etc. */}
       </Routes>
     </Router>
   );
