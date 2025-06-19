@@ -1,4 +1,4 @@
-// src/pages/HomePage.jsx import React, { useState } from "react"; import { Link } from "react-router-dom";
+import React, { useState } from "react"; import { Link } from "react-router-dom"; import Footer from "../components/Footer";
 
 export default function HomePage() { const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,8 +23,7 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
       className="md:hidden text-charcoal focus:outline-none"
       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
     >
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-           viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
@@ -71,23 +70,25 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-sm md:text-base">
       <ul className="space-y-2 list-disc list-inside">
         <li>✈️ Flight Itinerary Preparation (Local & International)</li>
-        <li>🚂 Visa Facilitation Services</li>
+        <li>🛂 Visa Facilitation Services</li>
         <li>🛡️ Travel Insurance (medical, student, business, tourist, etc.)</li>
         <li>🏨 Hotel Reservation (Local & International)</li>
         <li>🌍 Tour Packages (Nigeria and abroad)</li>
         <li>🚘 Airport Protocol & Car Rentals</li>
       </ul>
       <ul className="space-y-2 list-disc list-inside">
-        <li>🛫 International Passport Assistance</li>
+        <li>🛃 International Passport Assistance</li>
         <li>🧾 Business Registration (CAC)</li>
         <li>✅ Booking of Flights, Rides, Ships & Trains</li>
-        <li>🎩 Tour & Event Ticketing Worldwide</li>
+        <li>🎟️ Tour & Event Ticketing Worldwide</li>
         <li>🌐 Tourist Center Bookings</li>
         <li>📰 Daily Immigration News & Travel Tips</li>
         <li>🚗 Buy & Sell Cars / Land / Property, Handle Logistics & Projects</li>
       </ul>
     </div>
   </section>
+
+  <Footer />
 </main>
 
 ); }
