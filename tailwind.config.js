@@ -1,16 +1,16 @@
-// tailwind.config.js
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",  // ✅ VERY IMPORTANT for Vite + Tailwind to scan all files
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        "red-primary": "#E50914",
-        charcoal: "#1e1e1e",
+        "red-primary": "#cc0000",
+        charcoal: "#333333",
       },
     },
   },
   plugins: [],
-};
+}
