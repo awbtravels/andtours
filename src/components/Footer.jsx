@@ -1,15 +1,21 @@
 // src/components/Footer.jsx
 import React from "react";
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#222", color: "#fff", padding: "2rem" }}>
-      <h2>Social Icons Test</h2>
-      <div style={{ fontSize: "2rem", display: "flex", gap: "1rem" }}>
-        <FaInstagram />
-        <FaFacebookF />
-        <FaWhatsapp />
+    <footer className="bg-charcoal text-white px-6 py-10">
+      <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
+      <div className="flex gap-4 text-2xl">
+        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <FaFacebookF className="hover:text-red-primary" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <FaInstagram className="hover:text-red-primary" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+          <FaTwitter className="hover:text-red-primary" />
+        </a>
       </div>
     </footer>
   );
