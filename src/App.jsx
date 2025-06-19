@@ -1,5 +1,7 @@
+// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import TeamPage from "./pages/TeamPage";
@@ -9,10 +11,12 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/consultation" element={<ConsultationPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="team" element={<TeamPage />} />
+          <Route path="consultation" element={<ConsultationPage />} />
+        </Route>
       </Routes>
     </Router>
   );
