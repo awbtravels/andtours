@@ -1,5 +1,15 @@
-// src/components/Footer.jsx
 import React from "react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaPinterest,
+  FaWhatsapp,
+  FaYelp,
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -40,48 +50,17 @@ export default function Footer() {
         {/* Social Media */}
         <div>
           <h4 className="font-bold text-red-primary mb-3">Connect With Us</h4>
-          <ul className="space-y-1">
-            <li>
-              <a href="https://www.instagram.com/awbtravelsandtours_ltd?igsh=NmZ1cG85bjdqYzg4&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                📸 Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/share/1Adryh8WSU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                📘 Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/message/WFMJG5NMTXMGN1" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                💬 WhatsApp
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/awb-travles-and-tours-ltd-a717442b5" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                💼 LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                🎵 TikTok
-              </a>
-            </li>
-            <li>
-              <a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                ▶️ YouTube
-              </a>
-            </li>
-            <li>
-              <a href="https://www.yelp.com/user_details?userid=J0gFE-D10yQPtY9cKX9thA" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                ⭐ Yelp
-              </a>
-            </li>
-            <li>
-              <a href="https://www.pinterest.com/awbtravelsandtours/" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">
-                📌 Pinterest
-              </a>
-            </li>
-          </ul>
+          <div className="flex flex-wrap gap-3 text-lg">
+            <a href="https://www.instagram.com/awbtravelsandtours_ltd" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaInstagram /></a>
+            <a href="https://www.facebook.com/share/1Adryh8WSU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaFacebookF /></a>
+            <a href="https://x.com/AwbTravelsnTour" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaXTwitter /></a>
+            <a href="https://wa.me/message/WFMJG5NMTXMGN1" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaWhatsapp /></a>
+            <a href="https://www.linkedin.com/in/awb-travles-and-tours-ltd-a717442b5" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaLinkedinIn /></a>
+            <a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaTiktok /></a>
+            <a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaYoutube /></a>
+            <a href="https://www.yelp.com/user_details?userid=J0gFE-D10yQPtY9cKX9thA" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaYelp /></a>
+            <a href="https://www.pinterest.com/awbtravelsandtours/" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary"><FaPinterest /></a>
+          </div>
         </div>
       </div>
 
