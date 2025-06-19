@@ -1,12 +1,12 @@
 // src/App.jsx
 import React from "react";
-import Footer from "./components/Footer";
+import SocialIcons from "./components/SocialIcons";
 
 export default function App() {
   return (
     <div>
-      <h1>Hello from AWB Travels</h1>
-      <Footer />
+      <h1 className="text-center text-2xl p-4">AWB Travels Icon Test</h1>
+      <SocialIcons />
     </div>
   );
 }
