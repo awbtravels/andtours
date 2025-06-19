@@ -1,11 +1,10 @@
-// src/components/Footer.jsx
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white px-6 py-10">
-      <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
+    <footer className="bg-black text-white p-6">
+      <h2 className="text-lg font-bold mb-3">Follow Us</h2>
       <div className="flex gap-4 text-2xl">
         <a href="https://facebook.com" target="_blank" rel="noreferrer">
           <FaFacebookF className="hover:text-red-primary" />
