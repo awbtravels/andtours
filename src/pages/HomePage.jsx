@@ -23,8 +23,7 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
       className="md:hidden text-charcoal focus:outline-none"
       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
     >
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-           viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
@@ -52,8 +51,7 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
       Welcome to <span className="text-red-primary">AWB Travels and Tours</span>
     </h1>
     <p className="max-w-xl mx-auto text-base md:text-lg">
-      Your trusted partner for <strong>visa assistance, travel insurance, flight booking</strong>,
-      hotel reservations, and more — <em>...fulfilling your dream life</em>.
+      Your trusted partner for <strong>visa assistance, travel insurance, flight booking</strong>, hotel reservations, and more — <em>...fulfilling your dream life</em>.
     </p>
     <a
       href="/consultation"
@@ -89,7 +87,7 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
     </div>
   </section>
 
-  {/* FOOTER */}
+  {/* FOOTER SECTION */}
   <Footer />
 </main>
 
