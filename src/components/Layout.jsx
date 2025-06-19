@@ -7,7 +7,7 @@ export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="font-sans text-charcoal bg-white">
+    <>
       {/* HEADER */}
       <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
         <div className="flex items-center gap-2">
@@ -29,6 +29,7 @@ export default function Layout() {
           <Link to="/insurance" className="hover:text-red-primary">Insurance</Link>
           <Link to="/about" className="hover:text-red-primary">About</Link>
           <Link to="/team" className="hover:text-red-primary">Our Team</Link>
+          <Link to="/news" className="hover:text-red-primary">News</Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -37,7 +38,7 @@ export default function Layout() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-               viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+            viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -45,7 +46,7 @@ export default function Layout() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden px-6 py-4 bg-white shadow text-sm font-medium space-y-2">
+        <nav className="md:hidden px-6 py-4 bg-white shadow text-sm text-charcoal font-medium space-y-2">
           <Link to="/" className="block hover:text-red-primary">Home</Link>
           <Link to="/consultation" className="block hover:text-red-primary">Booking Consultation</Link>
           <Link to="/flights" className="block hover:text-red-primary">Flight</Link>
@@ -53,16 +54,17 @@ export default function Layout() {
           <Link to="/insurance" className="block hover:text-red-primary">Insurance</Link>
           <Link to="/about" className="block hover:text-red-primary">About</Link>
           <Link to="/team" className="block hover:text-red-primary">Our Team</Link>
+          <Link to="/news" className="block hover:text-red-primary">News</Link>
         </nav>
       )}
 
-      {/* MAIN PAGE CONTENT */}
-      <div className="min-h-screen">
+      {/* CONTENT SLOT */}
+      <main className="min-h-screen bg-white text-charcoal font-sans">
         <Outlet />
-      </div>
+      </main>
 
       {/* FOOTER */}
       <Footer />
-    </div>
+    </>
   );
 }
