@@ -3,20 +3,19 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
+  FaWhatsapp,
   FaYoutube,
   FaTiktok,
   FaTwitter,
   FaLinkedinIn,
-  FaPinterest,
-  FaWhatsapp,
   FaYelp,
+  FaPinterestP,
 } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white px-6 pt-10 pb-6 mt-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-
         {/* Company Info */}
         <div>
           <h4 className="font-bold text-red-primary mb-3">AWB Travels and Tours Ltd</h4>
@@ -45,41 +44,22 @@ export default function Footer() {
             <li><a href="/consultation" className="hover:text-red-primary">Consultation</a></li>
             <li><a href="/insurance" className="hover:text-red-primary">Insurance</a></li>
             <li><a href="/team" className="hover:text-red-primary">Our Team</a></li>
-            <li><a href="/news" className="hover:text-red-primary">News</a></li>
           </ul>
         </div>
 
         {/* Social Media */}
         <div>
           <h4 className="font-bold text-red-primary mb-3">Connect With Us</h4>
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2">
-              <FaInstagram /> <a href="https://www.instagram.com/awbtravelsandtours_ltd?igsh=NmZ1cG85bjdqYzg4&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">Instagram</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaFacebookF /> <a href="https://www.facebook.com/share/1Adryh8WSU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">Facebook</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaTwitter /> <a href="https://x.com/AwbTravelsnTour" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">Twitter</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaWhatsapp /> <a href="https://wa.me/message/WFMJG5NMTXMGN1" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">WhatsApp</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaLinkedinIn /> <a href="https://www.linkedin.com/in/awb-travles-and-tours-ltd-a717442b5" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">LinkedIn</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaTiktok /> <a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">TikTok</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaYoutube /> <a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">YouTube</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaYelp /> <a href="https://www.yelp.com/user_details?userid=J0gFE-D10yQPtY9cKX9thA" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">Yelp</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaPinterest /> <a href="https://www.pinterest.com/awbtravelsandtours/" target="_blank" rel="noopener noreferrer" className="hover:text-red-primary">Pinterest</a>
-            </li>
+          <ul className="space-y-2 text-sm">
+            <li><a href="https://www.instagram.com/awbtravelsandtours_ltd" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaInstagram /> Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1Adryh8WSU" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaFacebookF /> Facebook</a></li>
+            <li><a href="https://wa.me/message/WFMJG5NMTXMGN1" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaWhatsapp /> WhatsApp</a></li>
+            <li><a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaYoutube /> YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaTiktok /> TikTok</a></li>
+            <li><a href="https://x.com/AwbTravelsnTour" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaTwitter /> Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/awb-travles-and-tours-ltd-a717442b5" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaLinkedinIn /> LinkedIn</a></li>
+            <li><a href="https://www.yelp.com/user_details?userid=J0gFE-D10yQPtY9cKX9thA" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaYelp /> Yelp</a></li>
+            <li><a href="https://www.pinterest.com/awbtravelsandtours/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-primary"><FaPinterestP /> Pinterest</a></li>
           </ul>
         </div>
       </div>
