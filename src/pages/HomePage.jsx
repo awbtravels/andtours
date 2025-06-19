@@ -1,8 +1,8 @@
-// src/pages/HomePage.jsx import React, { useState } from "react"; import { Link } from "react-router-dom";
+// src/pages/HomePage.jsx import React, { useState } from "react"; import { Link } from "react-router-dom"; import Footer from "../components/Footer";
 
 export default function HomePage() { const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HEADER */} <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md"> <div className="flex items-center gap-2"> <Link to="/"> <img src="/logo.png" alt="AWB Logo" className="h-10 w-auto" /> </Link> <div className="text-sm font-semibold text-red-primary"> AWB Travels and Tours Ltd <p className="text-xs text-gray-600">RC: 7177769</p> </div> </div>
+return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HEADER */} <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md"> <Link to="/" className="flex items-center gap-2"> <img src="/logo.png" alt="AWB Logo" className="h-10 w-auto" /> <div className="text-sm font-semibold text-red-primary"> AWB Travels and Tours Ltd <p className="text-xs text-gray-600">RC: 7177769</p> </div> </Link>
 
 {/* Desktop Menu */}
     <nav className="hidden md:flex items-center gap-6 text-sm text-charcoal font-medium">
@@ -23,15 +23,8 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
       className="md:hidden text-charcoal focus:outline-none"
       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
     >
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
+        viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
@@ -96,10 +89,8 @@ return ( <main className="bg-white text-charcoal min-h-screen font-sans"> {/* HE
     </div>
   </section>
 
-  {/* FOOTER CTA */}
-  <section className="bg-charcoal text-white text-center py-4">
-    <p className="text-sm">RC: 7177769 — ...fulfilling your dream life</p>
-  </section>
+  {/* FOOTER */}
+  <Footer />
 </main>
 
 ); }
