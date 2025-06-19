@@ -1,12 +1,12 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import TeamPage from "./pages/TeamPage";
-import ConsultationPage from "./pages/ConsultationPage"; // Placeholder if needed
+import ConsultationPage from "./pages/ConsultationPage"; // optional if you have one
 
-export default function App() {
+function App() {
   return (
     <Router>
       <Routes>
@@ -14,8 +14,9 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/consultation" element={<ConsultationPage />} />
-        {/* Add more routes here */}
       </Routes>
     </Router>
   );
 }
+
+export default App;
