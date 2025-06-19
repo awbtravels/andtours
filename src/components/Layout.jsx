@@ -1,6 +1,7 @@
+// src/components/Layout.jsx
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import Footer from "./Footer"; // ✅ Make sure this path is correct
+import Footer from "./Footer";
 
 export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,14 +27,11 @@ export default function Layout() {
           <Link to="/flights" className="hover:text-red-primary">Flight</Link>
           <Link to="/hotels" className="hover:text-red-primary">Hotel</Link>
           <Link to="/insurance" className="hover:text-red-primary">Insurance</Link>
-          <Link to="#services" className="hover:text-red-primary">Services</Link>
-          <Link to="#news" className="hover:text-red-primary">News</Link>
           <Link to="/about" className="hover:text-red-primary">About</Link>
           <Link to="/team" className="hover:text-red-primary">Our Team</Link>
-          <Link to="#contact" className="hover:text-red-primary">Contact</Link>
         </nav>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-charcoal focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -47,21 +45,18 @@ export default function Layout() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden px-6 py-4 bg-white shadow text-sm text-charcoal font-medium space-y-2">
+        <nav className="md:hidden px-6 py-4 bg-white shadow text-sm font-medium space-y-2">
           <Link to="/" className="block hover:text-red-primary">Home</Link>
           <Link to="/consultation" className="block hover:text-red-primary">Booking Consultation</Link>
           <Link to="/flights" className="block hover:text-red-primary">Flight</Link>
           <Link to="/hotels" className="block hover:text-red-primary">Hotel</Link>
           <Link to="/insurance" className="block hover:text-red-primary">Insurance</Link>
-          <Link to="#services" className="block hover:text-red-primary">Services</Link>
-          <Link to="#news" className="block hover:text-red-primary">News</Link>
           <Link to="/about" className="block hover:text-red-primary">About</Link>
           <Link to="/team" className="block hover:text-red-primary">Our Team</Link>
-          <Link to="#contact" className="block hover:text-red-primary">Contact</Link>
         </nav>
       )}
 
-      {/* PAGE CONTENT */}
+      {/* MAIN PAGE CONTENT */}
       <div className="min-h-screen">
         <Outlet />
       </div>
