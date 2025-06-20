@@ -1,51 +1,49 @@
 // src/pages/HomePage.jsx
 import React from "react";
+import { FaStar } from "react-icons/fa";
 
-export default function HomePage() {
+const testimonials = [
+  {
+    name: "Mrs. Adebayo",
+    rating: 5,
+    feedback: "AWB Travels helped me get my visa hassle-free. Professional, fast, and reliable!",
+  },
+  {
+    name: "James O.",
+    rating: 4,
+    feedback: "Their consultation service is top-notch. Highly recommend for first-time travelers.",
+  },
+  {
+    name: "Fatima K.",
+    rating: 5,
+    feedback: "Everything from flight to insurance was well handled. Trustworthy team!",
+  },
+];
+
+const HomePage = () => {
   return (
-    <main className="bg-white text-charcoal font-sans">
-      {/* HERO SECTION */}
-      <section className="text-center px-6 py-20 bg-charcoal text-white">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">
-          Welcome to <span className="text-red-primary">AWB Travels and Tours</span>
-        </h1>
-        <p className="max-w-xl mx-auto text-base md:text-lg">
-          Your trusted partner for <strong>visa assistance, travel insurance, flight booking</strong>,
-          hotel reservations, and more — <em>...fulfilling your dream life</em>.
-        </p>
-        <a
-          href="/consultation"
-          className="mt-6 inline-block bg-red-primary hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300"
-        >
-          Book Visa Consultation
-        </a>
-      </section>
+    <div className="p-6 text-charcoal">
+      <h1 className="text-2xl font-bold mb-4">Welcome to AWB Travels and Tours</h1>
 
-      {/* SERVICES SECTION */}
-      <section id="services" className="bg-white text-charcoal py-16 px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
-          Our Services
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-sm md:text-base">
-          <ul className="space-y-2 list-disc list-inside">
-            <li>✈️ Flight Itinerary Preparation (Local & International)</li>
-            <li>🛂 Visa Facilitation Services</li>
-            <li>🛡️ Travel Insurance (medical, student, business, tourist, etc.)</li>
-            <li>🏨 Hotel Reservation (Local & International)</li>
-            <li>🌍 Tour Packages (Nigeria and abroad)</li>
-            <li>🚘 Airport Protocol & Car Rentals</li>
-          </ul>
-          <ul className="space-y-2 list-disc list-inside">
-            <li>🛃 International Passport Assistance</li>
-            <li>🧾 Business Registration (CAC)</li>
-            <li>✅ Booking of Flights, Rides, Ships & Trains</li>
-            <li>🎟️ Tour & Event Ticketing Worldwide</li>
-            <li>🌐 Tourist Center Bookings</li>
-            <li>📰 Daily Immigration News & Travel Tips</li>
-            <li>🚗 Buy & Sell Cars / Land / Property, Handle Logistics & Projects</li>
-          </ul>
+      {/* Testimonials Section */}
+      <section className="bg-gray-100 p-6 rounded-lg shadow-md mt-8">
+        <h2 className="text-xl font-bold text-red-primary mb-4">What Our Clients Say</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          {testimonials.map((t, i) => (
+            <div key={i} className="bg-white p-4 rounded-lg border shadow-sm">
+              <div className="flex gap-1 text-yellow-500 mb-2">
+                {Array.from({ length: t.rating }).map((_, idx) => (
+                  <FaStar key={idx} />
+                ))}
+              </div>
+              <p className="text-sm text-gray-700 italic">"{t.feedback}"</p>
+              <p className="text-sm mt-2 font-semibold">– {t.name}</p>
+            </div>
+          ))}
         </div>
       </section>
-    </main>
+    </div>
   );
-}
+};
+
+export default HomePage;
