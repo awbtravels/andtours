@@ -1,10 +1,19 @@
-// src/components/Layout.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 
 export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // ✅ Load Tawk.to Live Chat Widget
+  useEffect(() => {
+    const s1 = document.createElement("script");
+    s1.src = "https://embed.tawk.to/68559a0aadefb9190f5fe0d5/1iu763f2p";
+    s1.async = true;
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    document.body.appendChild(s1);
+  }, []);
 
   return (
     <>
@@ -27,7 +36,6 @@ export default function Layout() {
           <Link to="/flights" className="hover:text-red-primary">Flight</Link>
           <Link to="/hotels" className="hover:text-red-primary">Hotel</Link>
           <Link to="/insurance" className="hover:text-red-primary">Insurance</Link>
-          <Link to="/services" className="hover:text-red-primary">Our Services</Link>
           <Link to="/about" className="hover:text-red-primary">About</Link>
           <Link to="/team" className="hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="hover:text-red-primary">News</Link>
@@ -54,7 +62,6 @@ export default function Layout() {
           <Link to="/flights" className="block hover:text-red-primary">Flight</Link>
           <Link to="/hotels" className="block hover:text-red-primary">Hotel</Link>
           <Link to="/insurance" className="block hover:text-red-primary">Insurance</Link>
-          <Link to="/services" className="block hover:text-red-primary">Our Services</Link>
           <Link to="/about" className="block hover:text-red-primary">About</Link>
           <Link to="/team" className="block hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="block hover:text-red-primary">News</Link>
