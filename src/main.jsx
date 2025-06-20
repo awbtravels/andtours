@@ -1,10 +1,8 @@
-// src/main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
+import Layout from "./components/Layout";
 
-// Page Components
 import HomePage from "./pages/HomePage";
 import ConsultationPage from "./pages/ConsultationPage";
 import ConsultationSuccess from "./pages/ConsultationSuccess";
@@ -15,13 +13,13 @@ import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import Team from "./pages/Team";
 import NewsPage from "./pages/NewsPage";
-import TestimonialsPage from "./pages/TestimonialsPage"; // ✅ NEW
+import TestimonialsPage from "./pages/TestimonialsPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/consultation" element={<ConsultationPage />} />
           <Route path="/consultation-success" element={<ConsultationSuccess />} />
@@ -32,7 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} /> {/* ✅ NEW */}
+          <Route path="/testimonials" element={<TestimonialsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
