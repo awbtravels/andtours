@@ -20,7 +20,7 @@ export default function Layout() {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-charcoal font-medium">
           <Link to="/" className="hover:text-red-primary">Home</Link>
           <Link to="/consultation" className="hover:text-red-primary">Booking Consultation</Link>
@@ -31,10 +31,10 @@ export default function Layout() {
           <Link to="/about" className="hover:text-red-primary">About</Link>
           <Link to="/team" className="hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="hover:text-red-primary">News</Link>
-          <Link to="/testimonials" className="hover:text-red-primary">Testimonials</Link> {/* ✅ NEW */}
+          <Link to="/testimonials" className="hover:text-red-primary">Testimonials</Link> {/* NEW */}
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-charcoal focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -46,7 +46,7 @@ export default function Layout() {
         </button>
       </header>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
         <nav className="md:hidden px-6 py-4 bg-white shadow text-sm text-charcoal font-medium space-y-2">
           <Link to="/" className="block hover:text-red-primary">Home</Link>
@@ -58,11 +58,11 @@ export default function Layout() {
           <Link to="/about" className="block hover:text-red-primary">About</Link>
           <Link to="/team" className="block hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="block hover:text-red-primary">News</Link>
-          <Link to="/testimonials" className="block hover:text-red-primary">Testimonials</Link> {/* ✅ NEW */}
+          <Link to="/testimonials" className="block hover:text-red-primary">Testimonials</Link> {/* NEW */}
         </nav>
       )}
 
-      {/* PAGE CONTENT */}
+      {/* CONTENT SLOT */}
       <main className="min-h-screen bg-white text-charcoal font-sans">
         <Outlet />
       </main>
