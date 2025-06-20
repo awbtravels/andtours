@@ -1,16 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+// tailwind.config.js
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        "red-primary": "#cc0000",
-        charcoal: "#333333",
+        "red-primary": "#e3342f",
+        "charcoal": "#36454F",
       },
     },
   },
   plugins: [],
-}
+};
