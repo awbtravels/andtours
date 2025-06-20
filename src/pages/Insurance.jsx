@@ -3,22 +3,26 @@ import React from "react";
 
 export default function Insurance() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold text-red-primary mb-4">Travel Insurance</h1>
-      <p className="text-gray-700">
-        Buy all types of travel insurance — health, student, tourist, business — directly from us.
-        Coverage is instant, global, and reliable.
+    <div className="p-6 max-w-4xl mx-auto text-charcoal">
+      <h1 className="text-3xl font-bold text-red-primary mb-4">Travel Insurance</h1>
+      <p className="mb-6 text-lg">
+        Secure your travel with our reliable insurance plans tailored for all travelers.
+        AWB Travels and Tours offers different types of travel insurance for your needs.
       </p>
-      <div className="mt-6">
-        <a
-          href="https://your-insurance-provider.com" // Replace with actual link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-red-primary text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition"
-        >
-          Get Travel Insurance
-        </a>
-      </div>
+
+      <ul className="list-disc pl-6 space-y-2 text-base">
+        <li>✈️ <strong>Medical Travel Insurance</strong> – for health-related emergencies abroad</li>
+        <li>🎓 <strong>Student Travel Insurance</strong> – coverage for students traveling abroad</li>
+        <li>💼 <strong>Business Travel Insurance</strong> – protect your corporate journeys</li>
+        <li>🌍 <strong>Tourist Insurance</strong> – for short vacation or leisure trips</li>
+        <li>🧳 <strong>Baggage & Delay Protection</strong> – coverage for lost luggage or trip interruptions</li>
+      </ul>
+
+      <p className="mt-6 text-lg font-medium">
+        🛡️ All policies are underwritten by top insurance providers.
+        <br />
+        💬 Contact us to choose the right plan or <a href="/consultation" className="text-red-primary underline">book a consultation</a>.
+      </p>
     </div>
   );
 }
