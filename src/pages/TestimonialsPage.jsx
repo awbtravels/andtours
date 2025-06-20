@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Honourable",
+    name: "Collins A.",
     message:
       "I thought it wasn’t going to be easy to get a job until I met Honourable. He assisted from day 1 until I got the JavaScript work in Canada. I no go lie, AWB TRAVELS AND TOURS are good in what they do and I give them 💯",
     stars: 5,
