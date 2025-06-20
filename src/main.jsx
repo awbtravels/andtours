@@ -12,7 +12,7 @@ import Hotels from "./pages/Hotels";
 import Insurance from "./pages/Insurance";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
-import Team from "./pages/Team";
+import Team from "./pages/TeamPage";
 import NewsPage from "./pages/NewsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 
