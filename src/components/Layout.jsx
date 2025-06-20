@@ -31,7 +31,7 @@ export default function Layout() {
           <Link to="/about" className="hover:text-red-primary">About</Link>
           <Link to="/team" className="hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="hover:text-red-primary">News</Link>
-          <Link to="/testimonials" className="hover:text-red-primary">Testimonials</Link> {/* NEW */}
+          <Link to="/testimonials" className="hover:text-red-primary">Testimonials</Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -58,7 +58,7 @@ export default function Layout() {
           <Link to="/about" className="block hover:text-red-primary">About</Link>
           <Link to="/team" className="block hover:text-red-primary">Our Team</Link>
           <Link to="/news" className="block hover:text-red-primary">News</Link>
-          <Link to="/testimonials" className="block hover:text-red-primary">Testimonials</Link> {/* NEW */}
+          <Link to="/testimonials" className="block hover:text-red-primary">Testimonials</Link>
         </nav>
       )}
 
