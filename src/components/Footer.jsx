@@ -47,15 +47,15 @@ export default function Footer() {
         <div>
           <h4 className="text-red-primary font-semibold mb-2">Connect With Us</h4>
           <ul className="space-y-1">
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a></li>
-            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /> Facebook</a></li>
+            <li><a href="https://www.instagram.com/awbtravelsandtours_ltd?igsh=NmZ1cG85bjdqYzg4&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1Adryh8WSU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebook /> Facebook</a></li>
             <li><a href="https://wa.me/2348102985914" target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></li>
-            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /> YouTube</a></li>
-            <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><FaTiktok /> TikTok</a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /> Twitter</a></li>
-            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a></li>
-            <li><a href="https://yelp.com" target="_blank" rel="noopener noreferrer"><FaYelp /> Yelp</a></li>
-            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><FaPinterest /> Pinterest</a></li>
+            <li><a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noopener noreferrer"><FaYoutube /> YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noopener noreferrer"><FaTiktok /> TikTok</a></li>
+            <li><a href="https://x.com/AwbTravelsnTour?t=ArfjB" target="_blank" rel="noopener noreferrer"><FaTwitter /> Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/awb-travles-and-tours-ltd-a717442b5" target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a></li>
+            <li><a href="https://www.yelp.com/user_details?userid=J0gFE-D10yQPtY9cKX9thA" target="_blank" rel="noopener noreferrer"><FaYelp /> Yelp</a></li>
+            <li><a href="https://www.pinterest.com/awbtravelsandtours/" target="_blank" rel="noopener noreferrer"><FaPinterest /> Pinterest</a></li>
           </ul>
         </div>
       </div>
