@@ -49,7 +49,7 @@ export default function Footer() {
           <ul className="space-y-1">
             <li><a href="https://www.instagram.com/awbtravelsandtours_ltd?igsh=NmZ1cG85bjdqYzg4&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a></li>
             <li><a href="https://www.facebook.com/share/1Adryh8WSU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebook /> Facebook</a></li>
-            <li><a href="https://wa.me/2348102985914" target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></li>
+            <li><a href="https://wa.me/message/WFMJG5NMTXMGN1" target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></li>
             <li><a href="http://www.youtube.com/@AWBTRAVELSAndToursLTD-pf5qf" target="_blank" rel="noopener noreferrer"><FaYoutube /> YouTube</a></li>
             <li><a href="https://www.tiktok.com/@awb_travels_and_toursltd" target="_blank" rel="noopener noreferrer"><FaTiktok /> TikTok</a></li>
             <li><a href="https://x.com/AwbTravelsnTour?t=ArfjB" target="_blank" rel="noopener noreferrer"><FaTwitter /> Twitter</a></li>
