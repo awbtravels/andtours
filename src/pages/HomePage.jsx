@@ -1,6 +1,7 @@
 // src/pages/HomePage.jsx
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import TestimonialsWithSlider from "../components/TestimonialsWithSlider";
 
 const featuredTestimonials = [
   {
@@ -66,6 +67,11 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      {/* Full Slider + Testimonials Section */}
+      <div className="mt-12">
+        <TestimonialsWithSlider />
+      </div>
     </div>
   );
 }
