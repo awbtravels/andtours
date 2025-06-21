@@ -2,10 +2,12 @@
 import React from "react";
 import TestimonialsWithSlider from "../components/TestimonialsWithSlider";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <div>
+    <div className="bg-white text-charcoal">
       <TestimonialsWithSlider />
     </div>
   );
-}
+};
+
+export default HomePage;
