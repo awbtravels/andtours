@@ -3,11 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import "./index.css"; // ✅ Tailwind CSS
-
-// ✅ Add these two lines for react-slick styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./index.css"; // ✅ Import Tailwind CSS styles here
 
 // Page components
 import HomePage from "./pages/HomePage";
@@ -18,7 +14,7 @@ import Hotels from "./pages/Hotels";
 import Insurance from "./pages/Insurance";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
-import Team from "./pages/TeamPage";
+import Team from "./pages/TeamPage"; // ✅ Corrected name
 import NewsPage from "./pages/NewsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 
