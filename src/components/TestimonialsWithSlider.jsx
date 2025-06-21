@@ -6,82 +6,71 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
-    name: "James O.",
-    text: "I never believed I could get a Canada tourist visa so easily until I contacted AWB Travels. Everything was smooth, no stress at all.",
+    name: "Mrs. Sarah",
+    message: "AWB Travels helped me secure my visa stress-free. Excellent service!",
+    rating: 5,
   },
   {
-    name: "Sarah J.",
-    text: "AWB Travels helped me secure my Canadian study visa. Honourable’s advice was top notch. I’m now studying in Toronto.",
-  },
-  {
-    name: "Gabriel O.",
-    text: "AWB made my Canada work visa journey very easy. Professional and always available. Highly recommended!",
-  },
-  {
-    name: "Cynthia S.",
-    text: "I got my UK tourist visa with no issues thanks to AWB Travels. They take each client like family and always have your back.",
+    name: "Anonymous Client",
+    message: "Professional team, fast response, and reliable. Highly recommended!",
+    rating: 5,
   },
 ];
 
+const images = Array.from({ length: 30 }, (_, i) => `/animation/${i + 1}.jpeg`);
+
 const TestimonialsWithSlider = () => {
-  const imageSettings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1800,
     fade: true,
-    arrows: false,
-    pauseOnHover: false,
   };
 
   return (
     <div
-      className="w-full bg-cover bg-center py-10 px-4 md:px-10"
-      style={{ backgroundImage: `url('/bigben.jpeg')` }}
+      className="flex flex-col md:flex-row w-full bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/bigben.jpeg')" }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Testimonials Section */}
-        <div className="md:w-1/2 bg-white/90 rounded-2xl shadow-lg p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-red-primary mb-6 text-center">
-            What Our Clients Say
-          </h2>
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="mb-6">
-              <div className="flex items-center text-yellow-500 mb-2 text-sm">
-                {"★".repeat(5)}
-              </div>
-              <p className="text-gray-700 italic">"{testimonial.text}"</p>
-              <p className="text-sm font-semibold text-gray-800 mt-2">
-                — {testimonial.name}
-              </p>
+      {/* Testimonials Section */}
+      <div className="md:w-1/2 w-full bg-white/90 p-6 md:p-10 space-y-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-red-primary mb-4">
+          What Our Clients Say
+        </h2>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="border-b pb-4 mb-4">
+            <p className="text-lg italic">“{testimonial.message}”</p>
+            <div className="flex items-center mt-2">
+              {Array(testimonial.rating)
+                .fill()
+                .map((_, i) => (
+                  <span key={i} className="text-yellow-500 text-xl">★</span>
+                ))}
+              <span className="ml-2 text-sm font-semibold text-gray-700">
+                {testimonial.name}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Animation Slider Section */}
+      <div className="md:w-1/2 w-full">
+        <Slider {...settings}>
+          {images.map((src, i) => (
+            <div key={i}>
+              <img
+                src={src}
+                alt={`Slide ${i + 1}`}
+                className="w-full h-[400px] md:h-[500px] object-cover"
+              />
             </div>
           ))}
-          <div className="text-right">
-            <a
-              href="/testimonials"
-              className="text-red-primary text-sm underline hover:opacity-80"
-            >
-              Read More Testimonials
-            </a>
-          </div>
-        </div>
-
-        {/* Image Slider Section */}
-        <div className="md:w-1/2 w-full">
-          <Slider {...imageSettings}>
-            {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i}>
-                <img
-                  src={`/animation/${i + 1}.jpeg`}
-                  alt={`Slide ${i + 1}`}
-                  className="w-full h-auto rounded-xl object-cover"
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        </Slider>
       </div>
     </div>
   );
