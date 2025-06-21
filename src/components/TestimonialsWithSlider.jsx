@@ -1,6 +1,5 @@
 // src/components/TestimonialsWithSlider.jsx
 import React from "react";
-import { FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,71 +7,76 @@ import "slick-carousel/slick/slick-theme.css";
 const testimonials = [
   {
     name: "James O.",
-    message: "I never believed I could get a Canada tourist visa so easily until I contacted AWB Travels. Everything was smooth, no stress at all.",
-    stars: 5,
+    text: "I never believed I could get a Canada tourist visa so easily until I contacted AWB Travels. Everything was smooth, no stress at all.",
   },
   {
     name: "Sarah J.",
-    message: "AWB Travels helped me secure my Canadian study visa. Honourable's advice was top notch. I’m now studying in Toronto.",
-    stars: 5,
+    text: "AWB Travels helped me secure my Canadian study visa. Honourable’s advice was top notch. I’m now studying in Toronto.",
   },
   {
     name: "Gabriel O.",
-    message: "AWB made my Canada work visa journey very easy. Professional and always available. Highly recommended!",
-    stars: 5,
+    text: "AWB made my Canada work visa journey very easy. Professional and always available. Highly recommended!",
   },
   {
     name: "Cynthia S.",
-    message: "I got my UK tourist visa with no wahala. They were fast and reliable. Highly recommend AWB Travels to everyone.",
-    stars: 5,
+    text: "I got my UK tourist visa with no issues thanks to AWB Travels. They take each client like family and always have your back.",
   },
 ];
 
-export default function TestimonialsWithSlider() {
-  const sliderSettings = {
+const TestimonialsWithSlider = () => {
+  const imageSettings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 1000,
     slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: false,
-    arrows: false,
     fade: true,
+    arrows: false,
+    pauseOnHover: false,
   };
 
   return (
-    <div className="bg-cover bg-center py-12 px-4" style={{ backgroundImage: "url('/background.jpg')" }}>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+    <div
+      className="w-full bg-cover bg-center py-10 px-4 md:px-10"
+      style={{ backgroundImage: `url('/bigben.jpeg')` }}
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Testimonials Section */}
-        <div className="space-y-6 bg-white bg-opacity-80 p-6 rounded-xl shadow-md">
-          <h2 className="text-2xl font-bold text-red-primary text-center">What Our Clients Say</h2>
-          {testimonials.map((t, i) => (
-            <div key={i} className="border border-gray-300 rounded-md p-4">
-              <div className="flex text-yellow-500 mb-2">
-                {Array.from({ length: t.stars }, (_, index) => (
-                  <FaStar key={index} />
-                ))}
+        <div className="md:w-1/2 bg-white/90 rounded-2xl shadow-lg p-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-red-primary mb-6 text-center">
+            What Our Clients Say
+          </h2>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="mb-6">
+              <div className="flex items-center text-yellow-500 mb-2 text-sm">
+                {"★".repeat(5)}
               </div>
-              <p className="italic text-gray-700 mb-1">“{t.message}”</p>
-              <p className="font-semibold text-charcoal">— {t.name}</p>
+              <p className="text-gray-700 italic">"{testimonial.text}"</p>
+              <p className="text-sm font-semibold text-gray-800 mt-2">
+                — {testimonial.name}
+              </p>
             </div>
           ))}
-          <div className="text-center pt-2">
-            <a href="/testimonials" className="text-red-primary font-medium hover:underline">See Full Testimonials</a>
+          <div className="text-right">
+            <a
+              href="/testimonials"
+              className="text-red-primary text-sm underline hover:opacity-80"
+            >
+              Read More Testimonials
+            </a>
           </div>
         </div>
 
-        {/* Sliding Animation */}
-        <div className="rounded-xl overflow-hidden shadow-lg">
-          <Slider {...sliderSettings}>
-            {Array.from({ length: 40 }, (_, i) => (
+        {/* Image Slider Section */}
+        <div className="md:w-1/2 w-full">
+          <Slider {...imageSettings}>
+            {Array.from({ length: 40 }).map((_, i) => (
               <div key={i}>
                 <img
-                  src={`/animation/${i + 1}.jpg`}
-                  alt={`slide-${i + 1}`}
-                  className="w-full h-96 object-cover rounded-xl"
+                  src={`/animation/${i + 1}.jpeg`}
+                  alt={`Slide ${i + 1}`}
+                  className="w-full h-auto rounded-xl object-cover"
                 />
               </div>
             ))}
@@ -81,4 +85,6 @@ export default function TestimonialsWithSlider() {
       </div>
     </div>
   );
-}
+};
+
+export default TestimonialsWithSlider;
